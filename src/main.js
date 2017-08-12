@@ -1,11 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App'
+import router from './router'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-default/index.css'
+Vue.config.productionTip=false
+Vue.use(ElementUI)
+/*
+
 
 Vue.use(VueRouter)
-
-import index from './components/index.vue'
-import hello from './components/hello.vue'
 
 const routes=[
   {path:'/',redirect:'/index'},
@@ -25,3 +29,12 @@ const app=new Vue({
   router,
   render:h=>h(App)
 }).$mount('#app')
+*/
+
+new Vue({
+  el:'#app',
+  router,
+  template:'<App/>',
+  components:{App}
+})
+

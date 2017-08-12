@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
+import hello from '@/components/hello'
+import element from '@/components/element'
+import index from '@/components/index'
+import info from '@/components/info'
+import sidebar from '@/components/sidebar'
 
 Vue.use(Router)
 
@@ -9,7 +13,27 @@ export default new Router({
     {
       path: '/',
       name: 'Hello',
-      component: Hello
+      component: hello
+    },
+    {
+      path:'/element',
+      name:'Element',
+      component:element
+    },
+    {
+      path:'/index',
+      name:'index',
+      component:index
+    },
+    {
+      path:'/info',
+      name:'info',
+      component:info
+    },
+    {
+      path:'/sidebar',
+      name:'sidebar',
+      component:sidebar
     }
   ]
 })
