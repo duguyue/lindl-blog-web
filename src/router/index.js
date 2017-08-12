@@ -4,6 +4,7 @@ import element from '@/components/element'
 import index from '@/components/index'
 import info from '@/components/info'
 import sidebar from '@/components/sidebar'
+import  right_t from '@/components/right_t'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path:'/sidebar',
       name:'sidebar',
       component:sidebar
+    },
+    {
+      path:'/right_t',
+      name:'right_t',
+      component:right_t
     }
   ]
 })
