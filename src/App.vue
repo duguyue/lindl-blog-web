@@ -101,11 +101,11 @@
   }
   .header{
     height: 8rem;
-    background-color: #324057;
+    background-color: #475669;
   }
   .footer{
     height: 8rem;
-    background-color: #324057;
+    background-color: #1F2D3D;
   }
   .tac{
     min-height: 8rem;
