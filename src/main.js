@@ -4,12 +4,14 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
-Vue.config.productionTip=false
-Vue.use(ElementUI)
+
+
+Vue.config.productionTip=false;
+Vue.use(ElementUI);
+Vue.use(VueRouter)
 /*
 
 
-Vue.use(VueRouter)
 
 const routes=[
   {path:'/',redirect:'/index'},
@@ -36,5 +38,17 @@ new Vue({
   router,
   template:'<App/>',
   components:{App}
-})
-
+});
+/*
+router.push('/home');
+let indexScrollTop = 0;
+router.beforeEach((to, from, next) => {
+  if (from.path === '/home') {
+    indexScrollTop = document.body.scrollTop;
+  }
+  if (to.path === '/home') {
+    window.scrollTo(0, indexScrollTop);
+  }
+  next();
+});
+*/
