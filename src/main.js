@@ -4,7 +4,9 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
+import global from './Global'
 
+Vue.prototype.global=global
 
 Vue.config.productionTip=false;
 Vue.use(ElementUI);

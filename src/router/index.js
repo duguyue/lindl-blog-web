@@ -5,6 +5,7 @@ import index from '@/components/index'
 import info from '@/components/info'
 import homePage from '@/components/HomePage'
 import content from '@/components/Content'
+import affair from '@/components/Affair'
 
 Vue.use(Router)
 
@@ -35,6 +36,10 @@ export default new Router({
           path:'content',
           name:'content',
           component:content
+        },{
+          path:'affair',
+          name:'affair',
+          component:affair
         }
       ]
     }
