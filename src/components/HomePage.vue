@@ -12,18 +12,18 @@
       <el-col :span="4" class="sidebar">
         <el-menu default-active="2" theme="dark" v-bind:router="true">
           <el-submenu index="1">
-            <template slot="title">导航一</template>
-            <el-menu-item index="/affair">事务管理</el-menu-item>
-            <el-menu-item index="/index">选项2</el-menu-item>
-            <el-menu-item index="/element">选项3</el-menu-item>
+            <template slot="title">事务管理</template>
+            <el-menu-item index="/affair_type">事务类别</el-menu-item>
+            <el-menu-item index="/affair">事务</el-menu-item>
+            <el-menu-item index="/note_book">笔记</el-menu-item>
           </el-submenu>
           <el-submenu index="2">
-            <template slot="title">导航二</template>
+            <template slot="title">收支管理</template>
             <el-menu-item index="/content">选项1</el-menu-item>
             <el-menu-item index="/info">选项2</el-menu-item>
-            <el-menu-item index="2-3">选项3</el-menu-item>
+            <el-menu-item index="/content">选项3</el-menu-item>
           </el-submenu>
-          <el-menu-item index="3">导航三</el-menu-item>
+          <el-menu-item index="/element">导航三</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="20">

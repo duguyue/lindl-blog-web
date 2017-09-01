@@ -17,24 +17,8 @@
         label="内容">
       </el-table-column>
       <el-table-column
-        prop="address"
-        label="地址">
-      </el-table-column>
-      <el-table-column
-        prop="plan_start_time"
-        label="计划开始时间">
-      </el-table-column>
-      <el-table-column
-        prop="plan_end_time"
-        label="计划截止时间">
-      </el-table-column>
-      <el-table-column
-        prop="rank"
-        label="重要等级">
-      </el-table-column>
-      <el-table-column
-        prop="remark"
-        label="备注">
+        prop="flag"
+        label="是否加密">
       </el-table-column>
     </el-table>
 
@@ -75,8 +59,7 @@
     created(){
       axios({
         method: 'get',
-        //url: 'static/api/t1.json',
-        url: this.global.serverPath+'/affair/queryAffairs',
+        url: this.global.serverPath+'/note_book/queryNoteBooks',
         dataType: 'jsonp',
         params:{
           pageNum:1,
@@ -84,14 +67,11 @@
         }
       })
         .then(function (response) {
-            console.log(response);
-//          var str=response.data;
-//          var arr=eval(str);
+          console.log(response);
           var arr=response.data.data.list;
           console.log(arr);
           this.tableData=arr;
 
-          //在这里需要bind(this)，才能访问到Vue实例中的data
         }.bind(this));
     }
   };

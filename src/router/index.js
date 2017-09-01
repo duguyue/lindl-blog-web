@@ -6,6 +6,8 @@ import info from '@/components/info'
 import homePage from '@/components/HomePage'
 import content from '@/components/Content'
 import affair from '@/components/Affair'
+import affairType from '@/components/AffairType'
+import noteBook from '@/components/NoteBook'
 
 Vue.use(Router)
 
@@ -36,10 +38,21 @@ export default new Router({
           path:'content',
           name:'content',
           component:content
-        },{
+        },
+        {
           path:'affair',
           name:'affair',
           component:affair
+        },
+        {
+          path:'affair_type',
+          name:'affair_type',
+          component:affairType
+        },
+        {
+          path:'note_book',
+          name:'note_book',
+          component:noteBook
         }
       ]
     }
