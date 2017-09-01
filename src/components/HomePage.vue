@@ -21,9 +21,10 @@
             <template slot="title">收支管理</template>
             <el-menu-item index="/income_type">用户收入类别</el-menu-item>
             <el-menu-item index="/expense_type">用户支出类别</el-menu-item>
-            <el-menu-item index="/content">选项3</el-menu-item>
+            <el-menu-item index="/income">用户收入</el-menu-item>
+            <el-menu-item index="/expense">用户支出</el-menu-item>
           </el-submenu>
-          <el-menu-item index="/element">导航三</el-menu-item>
+          <el-menu-item index="/user">用户管理</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="20">

@@ -10,6 +10,9 @@ import affairType from '@/components/AffairType'
 import noteBook from '@/components/NoteBook'
 import incomeType from '@/components/IncomeType'
 import expenseType from '@/components/ExpenseType'
+import income from '@/components/Income'
+import expense from '@/components/Expense'
+import user from '@/components/User'
 
 Vue.use(Router)
 
@@ -65,6 +68,21 @@ export default new Router({
           path:'expense_type',
           name:'expense_type',
           component:expenseType
+        },
+        {
+          path:'income',
+          name:'income',
+          component:income
+        },
+        {
+          path:'expense',
+          name:'expense',
+          component:expense
+        },
+        {
+          path:'user',
+          name:'user',
+          component:user
         }
       ]
     }
