@@ -13,8 +13,8 @@
         label="用户ID">
       </el-table-column>
       <el-table-column
-        prop="affair_type"
-        label="事务类别">
+        prop="income_type"
+        label="收入类别">
       </el-table-column>
     </el-table>
 
@@ -55,7 +55,7 @@
     created(){
       axios({
         method: 'get',
-        url: this.global.serverPath+'/affair_type/queryAffairTypes',
+        url: this.global.serverPath+'/income_type/queryIncomeTypes',
         dataType: 'jsonp',
         params:{
           pageNum:1,

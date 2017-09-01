@@ -8,6 +8,7 @@ import content from '@/components/Content'
 import affair from '@/components/Affair'
 import affairType from '@/components/AffairType'
 import noteBook from '@/components/NoteBook'
+import incomeType from '@/components/IncomeType'
 
 Vue.use(Router)
 
@@ -53,6 +54,11 @@ export default new Router({
           path:'note_book',
           name:'note_book',
           component:noteBook
+        },
+        {
+          path:'income_type',
+          name:'income_type',
+          component:incomeType
         }
       ]
     }
