@@ -20,7 +20,7 @@
           <el-submenu index="2">
             <template slot="title">收支管理</template>
             <el-menu-item index="/income_type">用户收入类别</el-menu-item>
-            <el-menu-item index="/info">选项2</el-menu-item>
+            <el-menu-item index="/expense_type">用户支出类别</el-menu-item>
             <el-menu-item index="/content">选项3</el-menu-item>
           </el-submenu>
           <el-menu-item index="/element">导航三</el-menu-item>
