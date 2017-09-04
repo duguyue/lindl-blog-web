@@ -29,11 +29,11 @@
     <el-pagination
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
-      :current-page="currentPage1"
-      :page-sizes="[100, 200, 300, 400]"
-      :page-size="100"
+      :current-page="curPage"
+      :page-sizes="[5, 10, 15, 20]"
+      :page-size="pageSize"
       layout="total, sizes, prev, pager, next, jumper"
-      :total="400">
+      :total="totalNum">
     </el-pagination>
 
   </el-col>
@@ -43,40 +43,46 @@
   import axios from 'axios';
   Vue.prototype.$ajax = axios
 
-
-
   export default {
     methods: {
       handleSizeChange(val) {
-        console.log(`每页 ${val} 条`);
+        this.pageSize=val;
       },
       handleCurrentChange(val) {
-        console.log(`当前页: ${val}`);
+        this.curPage=val;
+      },
+      reloadDataOfTable(pageNum,pageSize) {
+        axios({
+          method: 'get',
+          url: this.global.serverPath+'/user/queryUsers',
+          dataType: 'jsonp',
+          params:{
+            pageNum:pageNum,
+            pageSize:pageSize
+          }
+        })
+          .then(function (response) {
+            if(response.data.status==0){
+              var arr=response.data.data.list;
+              var total=response.data.data.total;
+
+              this.tableData=arr;
+
+              this.totalNum=total;
+            }
+          }.bind(this));
       }
     },
     data() {
       return {
         tableData: [],
-        currentPage1: 5,
+        curPage: 5,
+        pageSize:5,
+        totalNum:0
       }
     },
     created(){
-      axios({
-        method: 'get',
-        url: this.global.serverPath+'/user/queryUsers',
-        dataType: 'jsonp',
-        params:{
-          pageNum:1,
-          pageSize:10
-        }
-      })
-        .then(function (response) {
-          console.log(response);
-          var arr=response.data.data.list;
-          console.log(arr);
-          this.tableData=arr;
-
-        }.bind(this));
+      this.reloadDataOfTable(1,20);
     }
   };
 </script>

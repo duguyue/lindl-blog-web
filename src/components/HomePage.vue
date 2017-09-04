@@ -3,14 +3,14 @@
     <el-row>
       <el-col :span="24">
         <div class="header">
-          mmmmmmmmmmmmmmm
+          LinDL's 后台管理系统
         </div>
       </el-col>
     </el-row>
 
     <el-row class="tac">
       <el-col :span="4" class="sidebar">
-        <el-menu default-active="2" theme="dark" v-bind:router="true">
+        <el-menu default-active="2" theme="" v-bind:router="true">
           <el-submenu index="1">
             <template slot="title">事务管理</template>
             <el-menu-item index="/affair_type">事务类别</el-menu-item>
@@ -52,26 +52,35 @@
   .el-pagination{
     text-align: center;
   }
+
   .el-table{
-    width: 80%;
+    width: 90%;
     margin: 3rem;
   }
+
   .sidebar{
-    background-color: #324057;
-    min-height: 35rem;
+    background-color: #F9FAFC;
+    min-height: 65rem;
+    height: auto;
   }
   .header{
-    height: 8rem;
-    background-color: #475669;
-    color: darkgray;
+    height: 4rem;
+    background-color: #1D8CE0;
+    color:floralwhite;
+    text-align: center;
+    font-size: xx-large;
+    font-family:KaiTi;
+    padding-top: 2rem;
   }
   .footer{
-    height: 3rem;
-    background-color: #1F2D3D;
-    color: darkgray;
+    height: 6rem;
+    background-color: #324057;
+    color: floralwhite;
     text-align: center;
+    padding-top: 2rem;
   }
   .tac{
-    min-height: 8rem;
+    min-height: 65rem;
+    height: inherit;
   }
 </style>
