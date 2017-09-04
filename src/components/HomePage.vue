@@ -11,6 +11,7 @@
     <el-row class="tac">
       <el-col :span="4" class="sidebar">
         <el-menu default-active="2" theme="" v-bind:router="true">
+          <el-menu-item index="/user">用户管理</el-menu-item>
           <el-submenu index="1">
             <template slot="title">事务管理</template>
             <el-menu-item index="/affair_type">事务类别</el-menu-item>
@@ -24,7 +25,6 @@
             <el-menu-item index="/income">用户收入</el-menu-item>
             <el-menu-item index="/expense">用户支出</el-menu-item>
           </el-submenu>
-          <el-menu-item index="/user">用户管理</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="20">
