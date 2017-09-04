@@ -47,9 +47,13 @@
     methods: {
       handleSizeChange(val) {
         this.pageSize=val;
+
+        this.reloadDataOfTable(1,this.pageSize);
       },
       handleCurrentChange(val) {
         this.curPage=val;
+
+        this.reloadDataOfTable(this.curPage,this.pageSize);
       },
       reloadDataOfTable(pageNum,pageSize) {
         axios({
@@ -76,13 +80,13 @@
     data() {
       return {
         tableData: [],
-        curPage: 5,
-        pageSize:5,
+        curPage: 1,
+        pageSize:10,
         totalNum:0
       }
     },
     created(){
-      this.reloadDataOfTable(1,20);
+      this.reloadDataOfTable(this.curPage,this.pageSize);
     }
   };
 </script>
