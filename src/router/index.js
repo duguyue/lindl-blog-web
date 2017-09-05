@@ -13,6 +13,8 @@ import expenseType from '@/components/ExpenseType'
 import income from '@/components/Income'
 import expense from '@/components/Expense'
 import user from '@/components/User'
+import mavonEditor from '@/components/MavonEditor'
+
 
 Vue.use(Router)
 
@@ -83,6 +85,11 @@ export default new Router({
           path:'user',
           name:'user',
           component:user
+        },
+        {
+          path:'mavon_editor',
+          name:'mavon_editor',
+          component:mavonEditor
         }
       ]
     }

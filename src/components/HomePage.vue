@@ -25,6 +25,10 @@
             <el-menu-item index="/income">用户收入</el-menu-item>
             <el-menu-item index="/expense">用户支出</el-menu-item>
           </el-submenu>
+          <el-submenu index="3">
+            <template slot="title">插件应用</template>
+            <el-menu-item index="/mavon_editor">Mavon Markdown编辑器</el-menu-item>
+          </el-submenu>
         </el-menu>
       </el-col>
       <el-col :span="20">
