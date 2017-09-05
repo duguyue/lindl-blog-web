@@ -28,6 +28,7 @@
           <el-submenu index="3">
             <template slot="title">插件应用</template>
             <el-menu-item index="/mavon_editor">Mavon Markdown编辑器</el-menu-item>
+            <el-menu-item index="/bar_chart">柱形图</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-col>

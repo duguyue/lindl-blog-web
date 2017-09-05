@@ -14,6 +14,7 @@ import income from '@/components/Income'
 import expense from '@/components/Expense'
 import user from '@/components/User'
 import mavonEditor from '@/components/MavonEditor'
+import barChart from '@/components/BarChart'
 
 
 Vue.use(Router)
@@ -90,6 +91,11 @@ export default new Router({
           path:'mavon_editor',
           name:'mavon_editor',
           component:mavonEditor
+        },
+        {
+          path:'bar_chart',
+          name:'bar_chart',
+          component:barChart
         }
       ]
     }
